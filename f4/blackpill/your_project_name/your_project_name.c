@@ -32,6 +32,6 @@ int main(void) {
 
   while (1) {
     gpio_toggle(LED_PORT, LED_PIN); // Переключаем состояние светодиода
-    delay_ms(300000);               // Задержка 3 секунды
+    delay_ms(100000);               // Задержка 3 секунды
   }
 }

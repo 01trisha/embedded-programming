@@ -694,16 +694,16 @@ END GROUP
 OUTPUT(your_project_name.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000     0x2ac9
- .debug_info    0x00000000      0x7ef your_project_name.o
- .debug_info    0x000007ef      0x256 ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_all.o)
- .debug_info    0x00000a45      0x21b ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_f0234.o)
- .debug_info    0x00000c60      0x932 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc_common_all.o)
- .debug_info    0x00001592      0xfa1 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc.o)
- .debug_info    0x00002533      0x2d9 ../../../libopencm3//lib/libopencm3_stm32f4.a(vector.o)
- .debug_info    0x0000280c       0xf1 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_all.o)
- .debug_info    0x000028fd       0xe9 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_idcache.o)
- .debug_info    0x000029e6       0xe3 ../../../libopencm3//lib/libopencm3_stm32f4.a(pwr.o)
+.debug_info     0x00000000     0x2acb
+ .debug_info    0x00000000      0x7f1 your_project_name.o
+ .debug_info    0x000007f1      0x256 ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_all.o)
+ .debug_info    0x00000a47      0x21b ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_f0234.o)
+ .debug_info    0x00000c62      0x932 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc_common_all.o)
+ .debug_info    0x00001594      0xfa1 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc.o)
+ .debug_info    0x00002535      0x2d9 ../../../libopencm3//lib/libopencm3_stm32f4.a(vector.o)
+ .debug_info    0x0000280e       0xf1 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_all.o)
+ .debug_info    0x000028ff       0xe9 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_idcache.o)
+ .debug_info    0x000029e8       0xe3 ../../../libopencm3//lib/libopencm3_stm32f4.a(pwr.o)
 
 .debug_abbrev   0x00000000      0xaf7
  .debug_abbrev  0x00000000      0x1df your_project_name.o
