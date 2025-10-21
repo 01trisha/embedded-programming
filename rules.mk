@@ -157,6 +157,18 @@ GENERATED_BINARIES=$(BINARY).elf $(BINARY).bin $(BINARY).hex $(BINARY).srec $(BI
 images: $(BINARY).images
 flash: $(BINARY).flash
 
+debug:
+	$(MAKE) OPT=-Og DEBUG=-g elf
+
+debug-bin:
+	$(MAKE) OPT=-Og DEBUG=-g elf bin
+
+debug-hex:
+	$(MAKE) OPT=-Og DEBUG=-g elf hex
+
+debug-images:
+	$(MAKE) OPT=-Og DEBUG=-g elf images
+
 # Either verify the user provided LDSCRIPT exists, or generate it.
 ifeq ($(strip $(DEVICE)),)
 $(LDSCRIPT):
@@ -265,6 +277,6 @@ else
 		   $(*).elf
 endif
 
-.PHONY: images clean stylecheck styleclean elf bin hex srec list
+.PHONY: images clean stylecheck styleclean elf bin hex srec list debug debug-bin debug-hex debug-images
 
 -include $(OBJS:.o=.d)

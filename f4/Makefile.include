@@ -29,11 +29,9 @@ ARCH_FLAGS	= -mthumb -mcpu=cortex-m4 $(FP_FLAGS)
 endif
 
 ################################################################################
-# OpenOCD specific variables
-
-OOCD		?= openocd
-OOCD_INTERFACE	?= stlink-v2
-OOCD_TARGET	?= stm32f4x
+# texane/stlink specific variables
+# st-util debug server (default port: 4444)
+STLINK_PORT	?= :4444
 
 ################################################################################
 # Black Magic Probe specific variables
@@ -41,8 +39,10 @@ OOCD_TARGET	?= stm32f4x
 BMP_PORT	?=
 
 ################################################################################
-# texane/stlink specific variables
-#STLINK_PORT	?= :4242
+# OpenOCD specific variables (fallback if st-util not running)
+#OOCD		?= openocd
+#OOCD_INTERFACE	?= stlink-v2
+#OOCD_TARGET	?= stm32f4x
 
 
 include ../../../rules.mk

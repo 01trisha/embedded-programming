@@ -53,6 +53,26 @@ images: build
 
 build: lib examples
 
+debug: OPT=-Og
+debug: DEBUG=-g
+debug: EXAMPLE_RULES = elf
+debug: build
+
+debug-bin: OPT=-Og
+debug-bin: DEBUG=-g
+debug-bin: EXAMPLE_RULES = elf bin
+debug-bin: build
+
+debug-hex: OPT=-Og
+debug-hex: DEBUG=-g
+debug-hex: EXAMPLE_RULES = elf hex
+debug-hex: build
+
+debug-images: OPT=-Og
+debug-images: DEBUG=-g
+debug-images: EXAMPLE_RULES = elf images
+debug-images: build
+
 lib:
 	$(Q)if [ ! "`ls -A $(OPENCM3_DIR)`" ] ; then \
 		printf "######## ERROR ########\n"; \
@@ -97,5 +117,5 @@ styleclean: $(EXAMPLE_DIRS:=.styleclean)
 
 
 .PHONY: build lib examples $(EXAMPLE_DIRS) install clean stylecheck styleclean \
-        bin hex srec list images
+        bin hex srec list images debug debug-bin debug-hex debug-images
 
