@@ -1,0 +1,7 @@
+{
+    "debug.hideSlowPreLaunchWarning": true,
+    "clangd.arguments": [
+        "--compile-commands-dir=/Users/trisha/embedded-programming/cmsis_ex/out/CubeMX/STM32F4/Debug"
+    ],
+    "cortex-debug.variableUseNaturalFormat": true
+}

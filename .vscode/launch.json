@@ -1,0 +1,106 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32F411 via ST-Link",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "stutil",
+            "serverpath": "/opt/homebrew/bin/st-util",
+            "device": "STM32F411CEU6",
+            "interface": "swd",
+            "executable": "${workspaceFolder}/f4/blackpill/aaa/aaa.elf",
+            "svdFile": "${workspaceFolder}/STM32F411.svd",
+            "runToMain": true,
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "",
+            "showDevDebugOutput": false,
+            "updateRegistersOnStop": true,
+            "peripheralRegisters": true,
+            "memoryView": {
+                "enabled": true,
+                "columns": 16,
+                "displayMode": "hex+ascii",
+                "autoUpdate": true
+            },
+            "graphing": {
+                "enabled": true,
+                "timeBase": 100,
+                "variables": [
+                    "adc_buffer[0:63]",
+                    "sensor_data",
+                    "temperature_values[0:31]"
+                ]
+            },
+            "postRestartCommands": [
+                "monitor reset halt"
+            ],
+            "serverArgs": [
+                "--swd",
+                "--halt"
+            ],
+            "gdbPath": "/opt/gcc-arm/bin/arm-none-eabi-gdb"
+        },
+        {
+            "name": "CMSIS_DAP@pyOCD (launch)",
+            "type": "gdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/cmsis_ex",
+            "program": "out/CubeMX/STM32F4/Debug/CubeMX.elf",
+            "gdb": "arm-none-eabi-gdb",
+            "preLaunchTask": "CMSIS Load",
+            "initCommands": [
+                "monitor reset halt",
+                "tbreak main"
+            ],
+            "customResetCommands": [
+                "monitor reset halt",
+                "tbreak main",
+                "continue"
+            ],
+            "target": {
+                "server": "pyocd",
+                "serverParameters": [
+                    "gdbserver",
+                    "--probe",
+                    "cmsisdap:",
+                    "--connect",
+                    "attach",
+                    "--cbuild-run",
+                    "${command:cmsis-csolution.getCbuildRunFile}",
+                    "--quiet",
+                    "--log",
+                    "*.cbuild_run,*server=info"
+                ],
+                "port": "3333"
+            },
+            "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
+                "updateConfiguration": "auto"
+            }
+        },
+        {
+            "name": "CMSIS_DAP@pyOCD (attach)",
+            "type": "gdbtarget",
+            "request": "attach",
+            "cwd": "${workspaceFolder}/cmsis_ex",
+            "program": "out/CubeMX/STM32F4/Debug/CubeMX.elf",
+            "gdb": "arm-none-eabi-gdb",
+            "initCommands": [
+                ""
+            ],
+            "customResetCommands": [
+                "monitor reset halt",
+                "tbreak main",
+                "continue"
+            ],
+            "target": {
+                "port": "3333"
+            },
+            "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
+                "updateConfiguration": "auto"
+            }
+        }
+    ]
+}

@@ -31,7 +31,7 @@ endif
 ################################################################################
 # texane/stlink specific variables
 # st-util debug server (default port: 4444)
-STLINK_PORT	?= :4444
+STLINK_PORT	?= :4242
 
 ################################################################################
 # Black Magic Probe specific variables
@@ -40,9 +40,9 @@ BMP_PORT	?=
 
 ################################################################################
 # OpenOCD specific variables (fallback if st-util not running)
-#OOCD		?= openocd
-#OOCD_INTERFACE	?= stlink-v2
-#OOCD_TARGET	?= stm32f4x
+OOCD		?= openocd
+OOCD_INTERFACE	?= stlink-v2
+OOCD_TARGET	?= stm32f4x
 
 
 include ../../../rules.mk
