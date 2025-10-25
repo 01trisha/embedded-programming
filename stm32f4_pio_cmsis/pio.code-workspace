@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "pio_cm3",
+			"path": "../pio_cm3"
+		}
+	],
+	"settings": {}
+}
