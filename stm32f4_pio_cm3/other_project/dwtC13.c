@@ -39,7 +39,7 @@ int main(void) {
   dwt_setup();
   gpio_mode_setup(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO13);
   while (1) {
-    dwt_delay_ms(1000);
+    dwt_delay_ms(500);
     gpio_toggle(GPIOC, GPIO13);
   }
 }
