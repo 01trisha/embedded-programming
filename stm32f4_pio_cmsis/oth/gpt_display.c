@@ -212,9 +212,9 @@ int main(void) {
 
     /* Вывести строку */
     SSD1315_SetCursor(0, 2);
-   SSD1315_WriteString("IRISHKA"); 
+   SSD1315_WriteString("aaaa"); 
    SSD1315_SetCursor(0, 4);
-   SSD1315_WriteString("LEGA");
+   SSD1315_WriteString("aaaa");
 
     while (1) {
         __WFI();

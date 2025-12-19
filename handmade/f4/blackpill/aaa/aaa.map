@@ -868,18 +868,18 @@ LOAD linker stubs
  .debug_line    0x000022d8      0x339 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_idcache.o)
  .debug_line    0x00002611      0x25d ../../../libopencm3//lib/libopencm3_stm32f4.a(pwr.o)
 
-.debug_str      0x00000000     0xf719
- .debug_str     0x00000000     0xf719 aaa.o
+.debug_str      0x00000000     0xf729
+ .debug_str     0x00000000     0xf729 aaa.o
                                0xb4fa (size before relaxing)
- .debug_str     0x0000f719     0x677e ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_all.o)
- .debug_str     0x0000f719     0x67a0 ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_f0234.o)
- .debug_str     0x0000f719     0x9b3d ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc_common_all.o)
- .debug_str     0x0000f719     0xa3d3 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc.o)
- .debug_str     0x0000f719     0x7033 ../../../libopencm3//lib/libopencm3_stm32f4.a(vector.o)
- .debug_str     0x0000f719     0x505d ../../../libopencm3//lib/libopencm3_stm32f4.a(dwt.o)
- .debug_str     0x0000f719     0x5af6 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_all.o)
- .debug_str     0x0000f719     0x5b18 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_idcache.o)
- .debug_str     0x0000f719     0x5751 ../../../libopencm3//lib/libopencm3_stm32f4.a(pwr.o)
+ .debug_str     0x0000f729     0x678e ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_all.o)
+ .debug_str     0x0000f729     0x67b0 ../../../libopencm3//lib/libopencm3_stm32f4.a(gpio_common_f0234.o)
+ .debug_str     0x0000f729     0x9b4d ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc_common_all.o)
+ .debug_str     0x0000f729     0xa3e3 ../../../libopencm3//lib/libopencm3_stm32f4.a(rcc.o)
+ .debug_str     0x0000f729     0x7043 ../../../libopencm3//lib/libopencm3_stm32f4.a(vector.o)
+ .debug_str     0x0000f729     0x506d ../../../libopencm3//lib/libopencm3_stm32f4.a(dwt.o)
+ .debug_str     0x0000f729     0x5b06 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_all.o)
+ .debug_str     0x0000f729     0x5b28 ../../../libopencm3//lib/libopencm3_stm32f4.a(flash_common_idcache.o)
+ .debug_str     0x0000f729     0x5761 ../../../libopencm3//lib/libopencm3_stm32f4.a(pwr.o)
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 aaa.o

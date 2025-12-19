@@ -1,7 +1,7 @@
 #include "stm32f4xx.h"
 void delay(int time){
-    for (volatile uint32_t i = 0; i < time*1000000; i++){
-
+    for (uint32_t i = 0; i < time*4000; i++){
+        __NOP();
     }
 }
 int main(){
@@ -13,7 +13,7 @@ int main(){
 
     while(1){
         GPIOC->ODR ^= (1 << 13);
-        delay(1);
+        delay(10);
     }
 
 
